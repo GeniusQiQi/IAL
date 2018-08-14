@@ -3,20 +3,20 @@
 ** Author:           SiQi_Wang
 ** Date:             2018/05/02
 ** Version:          1.0.2
-** Description:      ÖÇÄÜËã·¨º¯Êı¿â
+** Description:      æ™ºèƒ½ç®—æ³•å‡½æ•°åº“
 ******************************************************************************
 **                         Important Edit History                            *
 ** --------------------------------------------------------------------------*
-** DATE           		NAME             				DESCRIPTION          *
-** 2018/04/24     		SiQi_Wang                       Create               *
+** DATE           		NAME             	DESCRIPTION          *
+** 2018/04/24     		SiQi_Wang               Create               *
 ** --------------------------------------------------------------------------*
 ******************************************************************************
 **                         Important Edit Update                             *
 ** --------------------------------------------------------------------------*
-** DATE           		NAME             				DESCRIPTION          *
-** 2018/05/02     		SiQi_Wang                       Create               *
+** DATE           		NAME             	DESCRIPTION          *
+** 2018/05/02     		SiQi_Wang               Create               *
 ** --------------------------------------------------------------------------*
-** 1£©ĞÂÔöÁ´±í²Ù×÷
+** 1ï¼‰æ–°å¢é“¾è¡¨æ“ä½œ
 ******************************************************************************
 ** Copyright(c) 2018, SiQi_Wang
 ** All rights reserved.
@@ -33,25 +33,25 @@
 **                         Function Definition                               *
 **---------------------------------------------------------------------------*/
 /**--------------------------------------------------------------------------*
-Name:		    Swap
-Discribe:		Êı¾İ½»»»
-Parameter:      a, b (´ı½»»»Êı¾İ)
+Name:		Swap
+Discribe:	æ•°æ®äº¤æ¢
+Parameter:      a, b (å¾…äº¤æ¢æ•°æ®)
 **---------------------------------------------------------------------------*/
 template <typename T> void Swap(T &a, T &b) { T temp = a; a = b; b = temp; }
 
 /**--------------------------------------------------------------------------*
-Name:		    isDigit
-Discribe:		Êı×ÖÅĞ¶Ï
-Parameter:      ch (×Ö·û)
-Return:		    bool : true(ÊÇÊı×Ö), false(²»ÊÇÊı×Ö)
+Name:		isDigit
+Discribe:	æ•°å­—åˆ¤æ–­
+Parameter:      ch (å­—ç¬¦)
+Return:		bool : true(æ˜¯æ•°å­—), false(ä¸æ˜¯æ•°å­—)
 **---------------------------------------------------------------------------*/
 bool isDigit(char &ch) { return (ch >= '0' && ch <= '9') ? 1 : 0; }
 
 /**--------------------------------------------------------------------------*
-Name:		    gcd
-Discribe:		×î´ó¹«Ô¼Êı
+Name:		gcd
+Discribe:	æœ€å¤§å…¬çº¦æ•°
 Parameter:      num1, num2
-Return:		    int (×î´ó¹«Ô¼Êı)
+Return:		int (æœ€å¤§å…¬çº¦æ•°)
 **---------------------------------------------------------------------------*/
 int gcd(int &num1, int &num2) {
     while (num2) {
@@ -63,43 +63,43 @@ int gcd(int &num1, int &num2) {
 }
 
 /**--------------------------------------------------------------------------*
-Name:		    SwapStr
-Discribe:		×Ö·û´®·´×ª (Õû´®&×Ó´®)
-Parameter:      str(×Ö·û´®), len(×Ó´®³¤), start, end(ÏÂ±êË÷Òı,´Ó0¿ªÊ¼)
+Name:		SwapStr
+Discribe:	å­—ç¬¦ä¸²åè½¬ (æ•´ä¸²&å­ä¸²)
+Parameter:      str(å­—ç¬¦ä¸²), len(å­ä¸²é•¿), start, end(ä¸‹æ ‡ç´¢å¼•,ä»0å¼€å§‹)
 Header:         #include <string>
-				#include <cstring>
+		#include <cstring>
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : stringÀà×Ö·û´® ¡¾Õû´®·´×ª¡¿
+//é‡è½½1   Input : stringç±»å­—ç¬¦ä¸² ã€æ•´ä¸²åè½¬ã€‘
 void SwapStr(string &str) 
 { 
 	for (int j = 0, i = str.size() - 1; j < i; --i, ++j) 
 		Swap(str[i], str[j]); 
 }
-//ÖØÔØ2   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾Õû´®·´×ª¡¿
+//é‡è½½2   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€æ•´ä¸²åè½¬ã€‘
 void SwapStr(char *str) 
 { 
 	for (int j = 0, i = strlen(str) - 1; j < i; --i, ++j) 
 		Swap(str[i], str[j]); 
 }
-//ÖØÔØ3   Input : stringÀà×Ö·û´® ¡¾³¤¶Èlen×Ó´®·´×ª¡¿
+//é‡è½½3   Input : stringç±»å­—ç¬¦ä¸² ã€é•¿åº¦lenå­ä¸²åè½¬ã€‘
 void SwapStr(string &str, const int &len) 
 {
 	for (int j = 0, i = len - 1; j < i; --i, ++j) 
 		Swap(str[i], str[j]); 
 }
-//ÖØÔØ4   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾³¤¶Èlen×Ó´®·´×ª¡¿
+//é‡è½½4   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€é•¿åº¦lenå­ä¸²åè½¬ã€‘
 void SwapStr(char *str, const int &len) 
 { 
 	for (int j = 0, i = len - 1; j < i; --i, ++j) 
 		Swap(str[i], str[j]); 
 }
-//ÖØÔØ5   Input : stringÀà×Ö·û´®, ÏÂ±êË÷Òı·¶Î§[start, end]£¬ ¡¾(str[start], str[end])×Ó´®·´×ª¡¿
+//é‡è½½5   Input : stringç±»å­—ç¬¦ä¸², ä¸‹æ ‡ç´¢å¼•èŒƒå›´[start, end]ï¼Œ ã€(str[start], str[end])å­ä¸²åè½¬ã€‘
 void SwapStr(string &str, const int &start, const int &end) 
 { 
 	for (int j = start, i = end; j < i; --i, ++j) 
 		Swap(str[i], str[j]); 
 }
-//ÖØÔØ6   Input : C×Ö·ûÊı×éÖ¸Õë, ÏÂ±êË÷Òı·¶Î§[start, end]£¬ ¡¾(str[start], str[end])×Ó´®·´×ª¡¿
+//é‡è½½6   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ, ä¸‹æ ‡ç´¢å¼•èŒƒå›´[start, end]ï¼Œ ã€(str[start], str[end])å­ä¸²åè½¬ã€‘
 void SwapStr(char *str, const int &start, const int &end) 
 { 
 	for (int j = start, i = end; j < i; --i, ++j) 
@@ -107,48 +107,48 @@ void SwapStr(char *str, const int &start, const int &end)
 }
 
 /**--------------------------------------------------------------------------*
-Name:		    isPalindrome
-Discribe:		»ØÎÄÅĞ¶Ï (Õû´®&×Ó´®)
-Parameter:      str(×Ö·û´®), len(×Ó´®³¤), start, end(ÏÂ±êË÷Òı,´Ó0¿ªÊ¼)
-Return:		    bool : true(ÊÇ»ØÎÄ), false(²»ÊÇ»ØÎÄ)
+Name:		isPalindrome
+Discribe:	å›æ–‡åˆ¤æ–­ (æ•´ä¸²&å­ä¸²)
+Parameter:      str(å­—ç¬¦ä¸²), len(å­ä¸²é•¿), start, end(ä¸‹æ ‡ç´¢å¼•,ä»0å¼€å§‹)
+Return:		bool : true(æ˜¯å›æ–‡), false(ä¸æ˜¯å›æ–‡)
 Header:         #include <string>
-				#include <cstring>
+		#include <cstring>
 **---------------------------------------------------------------------------*/
 bool isPalindromeCore(const char *start, const char *end)
 {
 	return (start < end) ? ((*start == *end) ? isPalindromeCore(++start, --end) : false) : true;
 }
-//ÖØÔØ1   Input : stringÀà×Ö·û´® ¡¾Õû´®»ØÎÄÅĞ¶Ï¡¿
+//é‡è½½1   Input : stringç±»å­—ç¬¦ä¸² ã€æ•´ä¸²å›æ–‡åˆ¤æ–­ã€‘
 bool isPalindrome(const string &str) 
 { 
 	const char *pS = str.c_str(), *pE = pS + str.size() - 1; 
 	return isPalindromeCore(pS, pE); 
 }
-//ÖØÔØ2   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾Õû´®»ØÎÄÅĞ¶Ï¡¿
+//é‡è½½2   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€æ•´ä¸²å›æ–‡åˆ¤æ–­ã€‘
 bool isPalindrome(const char *str) 
 { 
 	const char *pS = str, *pE = pS + strlen(str) - 1; 
 	return isPalindromeCore(pS, pE); 
 }
-//ÖØÔØ3   Input : stringÀà×Ö·û´® ¡¾³¤¶Èlen×Ó´®»ØÎÄÅĞ¶Ï¡¿
+//é‡è½½3   Input : stringç±»å­—ç¬¦ä¸² ã€é•¿åº¦lenå­ä¸²å›æ–‡åˆ¤æ–­ã€‘
 bool isPalindrome(const string &str, const int &len) 
 { 
 	const char *pS = str.c_str(), *pE = pS + len - 1; 
 	return isPalindromeCore(pS, pE); 
 }
-//ÖØÔØ4   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾³¤¶Èlen×Ó´®»ØÎÄÅĞ¶Ï¡¿
+//é‡è½½4   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€é•¿åº¦lenå­ä¸²å›æ–‡åˆ¤æ–­ã€‘
 bool isPalindrome(const char *str, const int &len) 
 { 
 	const char *pS = str, *pE = pS + len - 1; 
 	return isPalindromeCore(pS, pE); 
 }
-//ÖØÔØ5   Input : stringÀà×Ö·û´® ¡¾(str[start], str[end])×Ó´®»ØÎÄÅĞ¶Ï¡¿
+//é‡è½½5   Input : stringç±»å­—ç¬¦ä¸² ã€(str[start], str[end])å­ä¸²å›æ–‡åˆ¤æ–­ã€‘
 bool isPalindrome(const string &str, const int &start, const int &end) 
 { 
 	const char *pS = str.c_str() + start, *pE = str.c_str() + end; 
 	return isPalindromeCore(pS, pE); 
 }
-//ÖØÔØ6   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾(str[start], str[end])×Ó´®»ØÎÄÅĞ¶Ï¡¿
+//é‡è½½6   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€(str[start], str[end])å­ä¸²å›æ–‡åˆ¤æ–­ã€‘
 bool isPalindrome(const char *str, const int &start, const int &end) 
 { 
 	const char *pS = str + start, *pE = str + end; 
@@ -156,13 +156,13 @@ bool isPalindrome(const char *str, const int &start, const int &end)
 }
 
 /**--------------------------------------------------------------------------*
-Name:		    Permutation
-Discribe:		È«ÅÅÁĞ£¨·µ»ØÕû´®&×Ó´®µÄÈ«ÅÅÁĞ¼°ÅÅÁĞ×ÜÊı£©
-Parameter:      str(×Ö·û´®), len(×Ó´®³¤), start, end(ÏÂ±êË÷Òı,´Ó0¿ªÊ¼)
-Return:		    permuPair : permuPair.array(ÅÅÁĞ), permuPair.count(ÅÅÁĞÊı)
+Name:		Permutation
+Discribe:	å…¨æ’åˆ—ï¼ˆè¿”å›æ•´ä¸²&å­ä¸²çš„å…¨æ’åˆ—åŠæ’åˆ—æ€»æ•°ï¼‰
+Parameter:      str(å­—ç¬¦ä¸²), len(å­ä¸²é•¿), start, end(ä¸‹æ ‡ç´¢å¼•,ä»0å¼€å§‹)
+Return:		permuPair : permuPair.array(æ’åˆ—), permuPair.count(æ’åˆ—æ•°)
 Header:         #include <string>
-				#include <cstring>
-				#include <vector>
+		#include <cstring>
+		#include <vector>
 **---------------------------------------------------------------------------*/
 /* struct permuPair
 {
@@ -179,7 +179,7 @@ void PermutationCore(char *pStr, char *pBegin, permuPair &res)
 		Swap(*pCh, *pBegin);
 	}
 }
-//ÖØÔØ1   Input : stringÀà×Ö·û´® ¡¾Õû´®ÅÅÁĞ¡¿
+//é‡è½½1   Input : stringç±»å­—ç¬¦ä¸² ã€æ•´ä¸²æ’åˆ—ã€‘
 permuPair Permutation(const string &str)
 {
 	permuPair result; if (str.empty()) return result;
@@ -188,7 +188,7 @@ permuPair Permutation(const string &str)
 	PermutationCore(Str, Str, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ2   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾Õû´®ÅÅÁĞ¡¿
+//é‡è½½2   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€æ•´ä¸²æ’åˆ—ã€‘
 permuPair Permutation(const char *str)
 {
 	permuPair result; if (str == nullptr) return result;
@@ -197,7 +197,7 @@ permuPair Permutation(const char *str)
 	PermutationCore(Str, Str, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ3   Input : stringÀà×Ö·û´® ¡¾³¤¶Èlen×Ó´®È«ÅÅÁĞ¡¿
+//é‡è½½3   Input : stringç±»å­—ç¬¦ä¸² ã€é•¿åº¦lenå­ä¸²å…¨æ’åˆ—ã€‘
 permuPair Permutation(const string &str, const int &len)
 {
 	permuPair result; if (str.empty()) return result;
@@ -206,7 +206,7 @@ permuPair Permutation(const string &str, const int &len)
 	PermutationCore(Str, Str, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ4   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾³¤¶Èlen×Ó´®È«ÅÅÁĞ¡¿
+//é‡è½½4   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€é•¿åº¦lenå­ä¸²å…¨æ’åˆ—ã€‘
 permuPair Permutation(const char *str, const int &len)
 {
 	permuPair result; if (str == nullptr) return result;
@@ -215,7 +215,7 @@ permuPair Permutation(const char *str, const int &len)
 	PermutationCore(Str, Str, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ5   Input : stringÀà×Ö·û´® ¡¾(str[start], str[end])×Ó´®È«ÅÅÁĞ¡¿
+//é‡è½½5   Input : stringç±»å­—ç¬¦ä¸² ã€(str[start], str[end])å­ä¸²å…¨æ’åˆ—ã€‘
 permuPair Permutation(const string &str, const int &start, const int &end)
 {
 	permuPair result; if (str.empty()) return result;
@@ -225,7 +225,7 @@ permuPair Permutation(const string &str, const int &start, const int &end)
 	PermutationCore(Str, Str, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ6   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾(str[start], str[end])×Ó´®È«ÅÅÁĞ¡¿
+//é‡è½½6   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€(str[start], str[end])å­ä¸²å…¨æ’åˆ—ã€‘
 permuPair Permutation(const char *str, const int &start, const int &end)
 {
 	permuPair result; if (str == nullptr) return result;
@@ -237,13 +237,13 @@ permuPair Permutation(const char *str, const int &start, const int &end)
 }
 
 /**--------------------------------------------------------------------------*
-Name:		    Combination & CombinationN
-Discribe:		È«×éºÏ£¨·µ»ØÕû´®&×Ó´®µÄÈ«×éºÏ¡¢×Ö·ûÈ«×éºÏ¼°×éºÏ×ÜÊı£©
-Parameter:      str(×Ö·û´®), len(×Ó´®³¤), n(×éºÏ´®³¤), start, end(ÏÂ±êË÷Òı,´Ó0¿ªÊ¼)
-Return:		    combPair : combPair.array(×éºÏ), combPair.count(×éºÏÊı)
+Name:		Combination & CombinationN
+Discribe:	ç»„åˆï¼ˆè¿”å›æ•´ä¸²&å­ä¸²çš„å…¨ç»„åˆã€å­—ç¬¦å…¨ç»„åˆåŠç»„åˆæ€»æ•°ï¼‰
+Parameter:      str(å­—ç¬¦ä¸²), len(å­ä¸²é•¿), n(ç»„åˆä¸²é•¿), start, end(ä¸‹æ ‡ç´¢å¼•,ä»0å¼€å§‹)
+Return:		combPair : combPair.array(ç»„åˆ), combPair.count(ç»„åˆæ•°)
 Header:         #include <string>
-				#include <cstring>
-				#include <vector>
+		#include <cstring>
+		#include <vector>
 **---------------------------------------------------------------------------*/
 /* struct combPair
 {
@@ -259,7 +259,7 @@ void CombinationCore(char *pStr, int number, vector<char> &ans, combPair &result
 	ans.pop_back();
 	CombinationCore(pStr + 1, number, ans, result);
 }
-//ÖØÔØ1   Input : stringÀà×Ö·û´® ¡¾Õû´®È«×éºÏ¡¿
+//é‡è½½1   Input : stringç±»å­—ç¬¦ä¸² ã€æ•´ä¸²å…¨ç»„åˆã€‘
 combPair Combination(const string &str)
 {
 	vector<char> ans; combPair result; if (str.empty()) return result;
@@ -269,7 +269,7 @@ combPair Combination(const string &str)
 	delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ2   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾Õû´®È«×éºÏ¡¿
+//é‡è½½2   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€æ•´ä¸²å…¨ç»„åˆã€‘
 combPair Combination(const char *str)
 {
 	vector<char> ans; combPair result; if (str == nullptr) return result;
@@ -279,7 +279,7 @@ combPair Combination(const char *str)
 	delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ3   Input : stringÀà×Ö·û´® ¡¾Ç°len¸ö×Ö·ûµÄÈ«×éºÏ¡¿
+//é‡è½½3   Input : stringç±»å­—ç¬¦ä¸² ã€å‰lenä¸ªå­—ç¬¦çš„å…¨ç»„åˆã€‘
 combPair Combination(const string &str, const int &len)
 {
 	vector<char> ans; combPair result; if (str.empty()) return result;
@@ -289,7 +289,7 @@ combPair Combination(const string &str, const int &len)
 	delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ4   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾Ç°len¸ö×Ö·ûµÄÈ«×éºÏ¡¿
+//é‡è½½4   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€å‰lenä¸ªå­—ç¬¦çš„å…¨ç»„åˆã€‘
 combPair Combination(const char *str, const int &len)
 {
 	vector<char> ans; combPair result; if (str == nullptr) return result;
@@ -299,7 +299,7 @@ combPair Combination(const char *str, const int &len)
 	delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ5   Input : stringÀà×Ö·û´® ¡¾(str[start], str[end])×Ó´®È«×éºÏ¡¿
+//é‡è½½5   Input : stringç±»å­—ç¬¦ä¸² ã€(str[start], str[end])å­ä¸²å…¨ç»„åˆã€‘
 combPair Combination(const string &str, const int &start, const int &end)
 {
 	vector<char> ans; combPair result; if (str.empty()) return result;
@@ -309,7 +309,7 @@ combPair Combination(const string &str, const int &start, const int &end)
 	delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ6   Input : C×Ö·ûÊı×éÖ¸Õë ¡¾(str[start], str[end])×Ó´®È«×éºÏ¡¿
+//é‡è½½6   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ ã€(str[start], str[end])å­ä¸²å…¨ç»„åˆã€‘
 combPair Combination(const char *str, const int &start, const int &end)
 {
 	vector<char> ans; combPair result; if (str == nullptr) return result;
@@ -320,7 +320,7 @@ combPair Combination(const char *str, const int &start, const int &end)
 	return result;
 }
 
-//ÖØÔØ1   Input : stringÀà×Ö·û´®, ×éºÏ×Ö·ûÊın  ¡¾Õû´®n×Ö·û×éºÏ¡¿
+//é‡è½½1   Input : stringç±»å­—ç¬¦ä¸², ç»„åˆå­—ç¬¦æ•°n  ã€æ•´ä¸²nå­—ç¬¦ç»„åˆã€‘
 combPair CombinationN(const string &str, const int &n)
 {
 	vector<char> ans; combPair result; if (str.empty()) return result;
@@ -330,7 +330,7 @@ combPair CombinationN(const string &str, const int &n)
 	CombinationCore(Str, n, ans, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ2   Input : C×Ö·ûÊı×éÖ¸Õë, ×éºÏ×Ö·ûÊın  ¡¾Õû´®n×Ö·û×éºÏ¡¿
+//é‡è½½2   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ, ç»„åˆå­—ç¬¦æ•°n  ã€æ•´ä¸²nå­—ç¬¦ç»„åˆã€‘
 combPair CombinationN(const char *str, const int &n)
 {
 	vector<char> ans; combPair result; if (str == nullptr) return result;
@@ -340,7 +340,7 @@ combPair CombinationN(const char *str, const int &n)
 	CombinationCore(Str, n, ans, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ3   Input : stringÀà×Ö·û´®, ×éºÏ×Ö·ûÊın ¡¾³¤¶Èlen×Ó´®n×Ö·û×éºÏ¡¿
+//é‡è½½3   Input : stringç±»å­—ç¬¦ä¸², ç»„åˆå­—ç¬¦æ•°n ã€é•¿åº¦lenå­ä¸²nå­—ç¬¦ç»„åˆã€‘
 combPair CombinationN(const string &str, const int &len, const int &n)
 {
 	vector<char> ans; combPair result; if (str.empty()) return result;
@@ -349,7 +349,7 @@ combPair CombinationN(const string &str, const int &len, const int &n)
 	CombinationCore(Str, n, ans, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ4   Input : C×Ö·ûÊı×éÖ¸Õë, ×éºÏ×Ö·ûÊın ¡¾³¤¶Èlen×Ó´®n×Ö·û×éºÏ¡¿
+//é‡è½½4   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ, ç»„åˆå­—ç¬¦æ•°n ã€é•¿åº¦lenå­ä¸²nå­—ç¬¦ç»„åˆã€‘
 combPair CombinationN(const char *str, const int &len, const int &n)
 {
 	vector<char> ans; combPair result; if (str == nullptr) return result;
@@ -358,7 +358,7 @@ combPair CombinationN(const char *str, const int &len, const int &n)
 	CombinationCore(Str, n, ans, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ5   Input : stringÀà×Ö·û´®, ×éºÏ×Ö·ûÊın ¡¾(str[start], str[end])×Ó´®n×Ö·û×éºÏ¡¿
+//é‡è½½5   Input : stringç±»å­—ç¬¦ä¸², ç»„åˆå­—ç¬¦æ•°n ã€(str[start], str[end])å­ä¸²nå­—ç¬¦ç»„åˆã€‘
 combPair CombinationN(const string &str, const int &start, const int &end, const int &n)
 {
 	vector<char> ans; combPair result; if (str.empty()) return result;
@@ -368,7 +368,7 @@ combPair CombinationN(const string &str, const int &start, const int &end, const
 	CombinationCore(Str, n, ans, result); delete[] Str; Str = nullptr;
 	return result;
 }
-//ÖØÔØ6   Input : C×Ö·ûÊı×éÖ¸Õë, ×éºÏ×Ö·ûÊın ¡¾(str[start], str[end])×Ó´®n×Ö·û×éºÏ¡¿
+//é‡è½½6   Input : Cå­—ç¬¦æ•°ç»„æŒ‡é’ˆ, ç»„åˆå­—ç¬¦æ•°n ã€(str[start], str[end])å­ä¸²nå­—ç¬¦ç»„åˆã€‘
 combPair CombinationN(const char *str, const int &start, const int &end, const int &n)
 {
 	vector<char> ans; combPair result; if (str == nullptr) return result;
@@ -381,15 +381,15 @@ combPair CombinationN(const char *str, const int &start, const int &end, const i
 
 /**--------------------------------------------------------------------------*
 Name:		    BubbleSort
-Discribe:		Ã°ÅİÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		å†’æ³¡æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void BubbleSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
-	int flag = 0; //ÅĞ¶ÏÅÅĞòÊÇ·ñÍê³É£¬²¢ÌáÇ°ÖĞÖ¹ºóĞøÅÅĞò¹ı³Ì
+	int flag = 0; //åˆ¤æ–­æ’åºæ˜¯å¦å®Œæˆï¼Œå¹¶æå‰ä¸­æ­¢åç»­æ’åºè¿‡ç¨‹
 	for (int i = 0; i != array.size() - 1; ++i)
 	{
 		flag = 0;
@@ -409,11 +409,11 @@ void BubbleSort(vector<int> &array, const int &rule)
 		}
 	}
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BubbleSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
-	int flag = 0; //ÅĞ¶ÏÅÅĞòÊÇ·ñÍê³É£¬²¢ÌáÇ°ÖĞÖ¹ºóĞøÅÅĞò¹ı³Ì
+	int flag = 0; //åˆ¤æ–­æ’åºæ˜¯å¦å®Œæˆï¼Œå¹¶æå‰ä¸­æ­¢åç»­æ’åºè¿‡ç¨‹
 	for (int i = 0; i < len - 1; ++i)
 	{
 		flag = 0;
@@ -433,11 +433,11 @@ void BubbleSort(vector<int> &array, const int &len, const int &rule)
 		}
 	}
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BubbleSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
-	int flag = 0; //ÅĞ¶ÏÅÅĞòÊÇ·ñÍê³É£¬²¢ÌáÇ°ÖĞÖ¹ºóĞøÅÅĞò¹ı³Ì
+	int flag = 0; //åˆ¤æ–­æ’åºæ˜¯å¦å®Œæˆï¼Œå¹¶æå‰ä¸­æ­¢åç»­æ’åºè¿‡ç¨‹
 	for (int i = 0; i < len - 1; ++i)
 	{
 		flag = 0;
@@ -457,11 +457,11 @@ void BubbleSort(int *array, const int &len, const int &rule)
 		}
 	}
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BubbleSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
-	int flag = 0; //ÅĞ¶ÏÅÅĞòÊÇ·ñÍê³É£¬²¢ÌáÇ°ÖĞÖ¹ºóĞøÅÅĞò¹ı³Ì
+	int flag = 0; //åˆ¤æ–­æ’åºæ˜¯å¦å®Œæˆï¼Œå¹¶æå‰ä¸­æ­¢åç»­æ’åºè¿‡ç¨‹
 	for (int i = start; i < end; ++i)
 	{
 		flag = 0;
@@ -481,11 +481,11 @@ void BubbleSort(vector<int> &array, const int &start, const int &end, const int 
 		}
 	}
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BubbleSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
-	int flag = 0; //ÅĞ¶ÏÅÅĞòÊÇ·ñÍê³É£¬²¢ÌáÇ°ÖĞÖ¹ºóĞøÅÅĞò¹ı³Ì
+	int flag = 0; //åˆ¤æ–­æ’åºæ˜¯å¦å®Œæˆï¼Œå¹¶æå‰ä¸­æ­¢åç»­æ’åºè¿‡ç¨‹
 	for (int i = start; i < end; ++i)
 	{
 		flag = 0;
@@ -508,11 +508,11 @@ void BubbleSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    SelectSort
-Discribe:		Ñ¡ÔñÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		é€‰æ‹©æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void SelectSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
@@ -530,7 +530,7 @@ void SelectSort(vector<int> &array, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void SelectSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -548,7 +548,7 @@ void SelectSort(vector<int> &array, const int &len, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void SelectSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -566,7 +566,7 @@ void SelectSort(int *array, const int &len, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void SelectSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -584,7 +584,7 @@ void SelectSort(vector<int> &array, const int &start, const int &end, const int 
 		break;
 	}
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void SelectSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -605,11 +605,11 @@ void SelectSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    InsertSort
-Discribe:		²åÈëÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		æ’å…¥æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void InsertSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
@@ -627,7 +627,7 @@ void InsertSort(vector<int> &array, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void InsertSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -645,7 +645,7 @@ void InsertSort(vector<int> &array, const int &len, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void InsertSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -663,7 +663,7 @@ void InsertSort(int *array, const int &len, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void InsertSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -681,7 +681,7 @@ void InsertSort(vector<int> &array, const int &start, const int &end, const int 
 		break;
 	}
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void InsertSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -702,11 +702,11 @@ void InsertSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    ShellSort
-Discribe:		Ï£¶ûÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		å¸Œå°”æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void ShellSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
@@ -726,7 +726,7 @@ void ShellSort(vector<int> &array, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void ShellSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -746,7 +746,7 @@ void ShellSort(vector<int> &array, const int &len, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void ShellSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -766,7 +766,7 @@ void ShellSort(int *array, const int &len, const int &rule)
 		break;
 	}
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void ShellSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -787,7 +787,7 @@ void ShellSort(vector<int> &array, const int &start, const int &end, const int &
 		break;
 	}
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void ShellSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -811,8 +811,8 @@ void ShellSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    QuickSort
-Discribe:		¿ìËÙÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		å¿«é€Ÿæ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 template <typename T> void QuickSortCore(T &array, int begin, int end, const int &rule)
@@ -843,31 +843,31 @@ template <typename T> void QuickSortCore(T &array, int begin, int end, const int
         break;
     }
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void QuickSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
 	QuickSortCore(array, 0, array.size()-1, rule);
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void QuickSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
 	QuickSortCore(array, 0, len-1, rule);
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void QuickSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
 	QuickSortCore(array, 0, len-1, rule);
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void QuickSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
 	QuickSortCore(array, start, end, rule);
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void QuickSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -876,8 +876,8 @@ void QuickSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    MergeSort
-Discribe:		¹é²¢ÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		å½’å¹¶æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 template <typename T> void MergeSortCore(T &array, T &ans, int start, int end, const int &rule)
@@ -904,14 +904,14 @@ template <typename T> void MergeSortCore(T &array, T &ans, int start, int end, c
 	for (; i >= start; --i) ans[index--] = array[i];
 	for (; j >= start + len + 1; --j) ans[index--] = array[j];
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void MergeSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
 	vector<int> ans = array;
 	MergeSortCore(ans, array, 0, array.size() - 1, rule);
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void MergeSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -920,7 +920,7 @@ void MergeSort(vector<int> &array, const int &len, const int &rule)
 	MergeSortCore(ans, array2, 0, len - 1, rule);
 	for (int i = 0; i < len; ++i) array[i] = array2[i];
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void MergeSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -930,7 +930,7 @@ void MergeSort(int *array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = array2[i];
 	delete[] ans; ans = nullptr; delete[] array2; array2 = nullptr;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void MergeSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -940,7 +940,7 @@ void MergeSort(vector<int> &array, const int &start, const int &end, const int &
 	MergeSortCore(ans, array2, 0, len - 1, rule);
 	for (int i = 0; i < len; ++i) array[i + start] = array2[i];
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void MergeSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -954,8 +954,8 @@ void MergeSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    HeapSort
-Discribe:		¶ÑÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		å †æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 template <typename T> void HeapAdjust(T &array, int i, const int& len, const int &rule)
@@ -982,7 +982,7 @@ template <typename T> void HeapAdjust(T &array, int i, const int& len, const int
         break;
     }
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void HeapSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
@@ -994,7 +994,7 @@ void HeapSort(vector<int> &array, const int &rule)
         HeapAdjust(array, 0, i, rule, 0);
     }
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void HeapSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -1008,7 +1008,7 @@ void HeapSort(vector<int> &array, const int &len, const int &rule)
     }
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void HeapSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -1023,7 +1023,7 @@ void HeapSort(int *array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void HeapSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -1038,7 +1038,7 @@ void HeapSort(vector<int> &array, const int &start, const int &end, const int &r
     }
 	for (int i = 0; i < len; ++i) array[i+start] = ans[i];
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void HeapSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -1057,23 +1057,23 @@ void HeapSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    RadixSort
-Discribe:		»ùÊıÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		åŸºæ•°æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <cmath>
 				#include <vector>
 **---------------------------------------------------------------------------*/
-int FindNum(const int &i, const int &number) //LSD»ñÈ¡ÊınumberµÄ¸÷Î»Êı×Ö(i == 1Îª¸öÎ»,i == 2ÎªÊ®Î»)
+int FindNum(const int &i, const int &number) //LSDè·å–æ•°numberçš„å„ä½æ•°å­—(i == 1ä¸ºä¸ªä½,i == 2ä¸ºåä½)
 { 
 	return (number / (int) pow(10,(i-1))) % 10; 
 } 
-int MaxBits(int *ans, const int &len) //»ñÈ¡Êı×é×î´óÖµµÄÎ»Êı
+int MaxBits(int *ans, const int &len) //è·å–æ•°ç»„æœ€å¤§å€¼çš„ä½æ•°
 {
     int Bits = 0, MAX = ans[0];
     for (int i = 1; i < len; ++i) if (MAX < ans[i]) MAX = ans[i];
     while (MAX > 0) { MAX = MAX / 10; ++Bits; }
     return Bits;
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void RadixSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
@@ -1104,7 +1104,7 @@ void RadixSort(vector<int> &array, const int &rule)
     }
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void RadixSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -1137,7 +1137,7 @@ void RadixSort(vector<int> &array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans1[i];
 	delete[] ans1; ans1 = nullptr; delete[] ans2; ans2 = nullptr;
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void RadixSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -1170,7 +1170,7 @@ void RadixSort(int *array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans1[i];
 	delete[] ans1; ans1 = nullptr; delete[] ans2; ans2 = nullptr;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void RadixSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -1204,7 +1204,7 @@ void RadixSort(vector<int> &array, const int &start, const int &end, const int &
 	for (int i = 0; i < len; ++i) array[i+start] = ans1[i];
 	delete[] ans1; ans1 = nullptr; delete[] ans2; ans2 = nullptr;
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void RadixSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -1241,8 +1241,8 @@ void RadixSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    CountSort
-Discribe:		¼ÆÊıÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		è®¡æ•°æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 template <typename T> void CountSortCore(T &array, const int &len, const int &rule)
@@ -1269,13 +1269,13 @@ template <typename T> void CountSortCore(T &array, const int &len, const int &ru
 	}
 	delete[] C; C = nullptr; delete[] B; B = nullptr;
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void CountSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
 	CountSortCore(array, array.size(), rule);
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void CountSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -1285,7 +1285,7 @@ void CountSort(vector<int> &array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void CountSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -1295,7 +1295,7 @@ void CountSort(int *array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void CountSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -1306,7 +1306,7 @@ void CountSort(vector<int> &array, const int &start, const int &end, const int &
 	for (int i = 0; i < len; ++i) array[i+start] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void CountSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -1320,8 +1320,8 @@ void CountSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    BucketSort
-Discribe:		Í°ÅÅĞò
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		æ¡¶æ’åº
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 template <typename T> void BucketSortCore(T &array, const int &len, const int &rule)
@@ -1343,13 +1343,13 @@ template <typename T> void BucketSortCore(T &array, const int &len, const int &r
 	}
 	delete[] C; C = nullptr; delete[] B; B = nullptr;
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void BucketSort(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
 	BucketSortCore(array, array.size(), rule);
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -1359,7 +1359,7 @@ void BucketSort(vector<int> &array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -1369,7 +1369,7 @@ void BucketSort(int *array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -1380,7 +1380,7 @@ void BucketSort(vector<int> &array, const int &start, const int &end, const int 
 	for (int i = 0; i < len; ++i) array[i+start] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -1394,8 +1394,8 @@ void BucketSort(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    BucketSort2
-Discribe:		Í°ÅÅĞò2
-Parameter:      array(Êı×é), len(ÅÅĞò³¤¶È), start, end(ÅÅĞòÇø¼ä£¬ÆğÊ¼Îª0), rule(ÅÅĞò¹æÔò 1-ÉıĞò 2-½µĞò)
+Discribe:		æ¡¶æ’åº2
+Parameter:      array(æ•°ç»„), len(æ’åºé•¿åº¦), start, end(æ’åºåŒºé—´ï¼Œèµ·å§‹ä¸º0), rule(æ’åºè§„åˆ™ 1-å‡åº 2-é™åº)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 int BucketSizeMap(const int &min, const int &max, const int &len) { return (max - min + 1 < len) ? max - min + 1 : len + 1; }
@@ -1416,11 +1416,11 @@ template <typename T> void BucketSortCore2(T &array, const int &len, const int &
 		for (int i = 0; i < len; ++i) Bucket[B[i]-min].push_back(B[i]);
 		for (int i = 0, k = 0; i < max - min + 1; ++i) for (int j = 0; j != Bucket[i].size(); ++j) B[k++] = i + min;
 	}
-	else // ³õÊ¼»¯Í°µÄ¸öÊıBucketSize == len£¬ ĞèÒª·ÖÅäÇø¼ä
+	else // åˆå§‹åŒ–æ¡¶çš„ä¸ªæ•°BucketSize == lenï¼Œ éœ€è¦åˆ†é…åŒºé—´
 	{
 		const int sect = (max - min + 1) / len;
 		for (int i = 0; i < len; ++i) Bucket[(B[i] - min) / sect].push_back(B[i]);
-		//µ÷ÓÃ¹é²¢ÅÅĞò¶ÔÃ¿Ò»¸öÍ°ÄÚÔªËØ½øĞĞÅÅĞò
+		//è°ƒç”¨å½’å¹¶æ’åºå¯¹æ¯ä¸€ä¸ªæ¡¶å†…å…ƒç´ è¿›è¡Œæ’åº
 		for (int i = 0; i < BucketSize; ++i) MergeSort(Bucket[i], 1);
 		for (int i = 0, k = 0; i < BucketSize; ++i)
 			for (int j = 0; j != Bucket[i].size(); ++j)
@@ -1433,13 +1433,13 @@ template <typename T> void BucketSortCore2(T &array, const int &len, const int &
 	}
 	delete[] B; B = nullptr;
 }
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×éÅÅĞò¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„æ’åºã€‘
 void BucketSort2(vector<int> &array, const int &rule)
 {
 	if (array.empty()) return;
 	BucketSortCore2(array, array.size(), rule);
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort2(vector<int> &array, const int &len, const int &rule)
 {
 	if (array.empty() || len == 0) return;
@@ -1449,7 +1449,7 @@ void BucketSort2(vector<int> &array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort2(int *array, const int &len, const int &rule)
 {
 	if (array == nullptr || len == 0) return;
@@ -1459,7 +1459,7 @@ void BucketSort2(int *array, const int &len, const int &rule)
 	for (int i = 0; i < len; ++i) array[i] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort2(vector<int> &array, const int &start, const int &end, const int &rule)
 {
 	if (array.empty() || start > end) return;
@@ -1470,7 +1470,7 @@ void BucketSort2(vector<int> &array, const int &start, const int &end, const int
 	for (int i = 0; i < len; ++i) array[i+start] = ans[i];
 	delete[] ans; ans = nullptr;
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×é½øĞĞÅÅĞò¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„è¿›è¡Œæ’åºã€‘
 void BucketSort2(int *array, const int &start, const int &end, const int &rule)
 {
 	if (array == nullptr || start > end) return;
@@ -1484,9 +1484,9 @@ void BucketSort2(int *array, const int &start, const int &end, const int &rule)
 
 /**--------------------------------------------------------------------------*
 Name:		    generateList
-Discribe:		Éú³ÉÒ»¸öµ¥ÏòÁ´±í 
-Parameter:      array(Êı×é), len(Á´±í³¤¶È), start, end(Ô­Êı×éÇø¼ä£¬ÆğÊ¼Îª0)
-Return:		    ListNode* (Á´±íÍ·½áµã)
+Discribe:		ç”Ÿæˆä¸€ä¸ªå•å‘é“¾è¡¨ 
+Parameter:      array(æ•°ç»„), len(é“¾è¡¨é•¿åº¦), start, end(åŸæ•°ç»„åŒºé—´ï¼Œèµ·å§‹ä¸º0)
+Return:		    ListNode* (é“¾è¡¨å¤´ç»“ç‚¹)
 Header:         #include <vector>
 **---------------------------------------------------------------------------*/
 /* struct ListNode
@@ -1495,7 +1495,7 @@ Header:         #include <vector>
 	ListNode* next;
 	ListNode(int x) : val(x), next(nullptr) {}
 }; */
-//ÖØÔØ1   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾Õû¸öÊı×é×ª»¯³Éµ¥Á´±í¡¿
+//é‡è½½1   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€æ•´ä¸ªæ•°ç»„è½¬åŒ–æˆå•é“¾è¡¨ã€‘
 ListNode* generateList(vector<int> &array)
 {
 	ListNode *head = new ListNode(0);
@@ -1508,7 +1508,7 @@ ListNode* generateList(vector<int> &array)
 	}
 	return head->next;
 }
-//ÖØÔØ2   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×éÉú³Éµ¥ÏòÁ´±í¡¿
+//é‡è½½2   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„ç”Ÿæˆå•å‘é“¾è¡¨ã€‘
 ListNode* generateList(vector<int> &array, const int &len)
 {
 	if (array.empty() || len == 0) return nullptr;
@@ -1522,7 +1522,7 @@ ListNode* generateList(vector<int> &array, const int &len)
 	}
 	return head->next;
 }
-//ÖØÔØ3   Input : CÊı×éÖ¸Õë  ¡¾¶Ô´Ó0¿ªÊ¼³¤¶ÈÎªlenµÄµÄ×ÓÊı×éÉú³Éµ¥ÏòÁ´±í¡¿
+//é‡è½½3   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹ä»0å¼€å§‹é•¿åº¦ä¸ºlençš„çš„å­æ•°ç»„ç”Ÿæˆå•å‘é“¾è¡¨ã€‘
 ListNode* generateList(int *array, const int &len)
 {
 	if (array == nullptr || len == 0) return nullptr;
@@ -1536,7 +1536,7 @@ ListNode* generateList(int *array, const int &len)
 	}
 	return head->next;
 }
-//ÖØÔØ4   Input : vector<int>ÀàĞÍÊı×é¶ÔÏó  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×éÉú³Éµ¥ÏòÁ´±í¡¿
+//é‡è½½4   Input : vector<int>ç±»å‹æ•°ç»„å¯¹è±¡  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„ç”Ÿæˆå•å‘é“¾è¡¨ã€‘
 ListNode* generateList(vector<int> &array, const int &start, const int &end)
 {
 	if (array.empty() || start > end) return nullptr;
@@ -1550,7 +1550,7 @@ ListNode* generateList(vector<int> &array, const int &start, const int &end)
 	}
 	return head->next;
 }
-//ÖØÔØ5   Input : CÊı×éÖ¸Õë  ¡¾¶ÔÇø¼ä[start, end]ÄÚ×ÓÊı×éÉú³Éµ¥ÏòÁ´±í¡¿
+//é‡è½½5   Input : Cæ•°ç»„æŒ‡é’ˆ  ã€å¯¹åŒºé—´[start, end]å†…å­æ•°ç»„ç”Ÿæˆå•å‘é“¾è¡¨ã€‘
 ListNode* generateList(int *array, const int &start, const int &end)
 {
 	if (array == nullptr || start > end) return nullptr;
@@ -1567,8 +1567,8 @@ ListNode* generateList(int *array, const int &start, const int &end)
 
 /**--------------------------------------------------------------------------*
 Name:		    printList
-Discribe:		´òÓ¡Á´±í 
-Parameter:      pHead(Í·½áµã)
+Discribe:		æ‰“å°é“¾è¡¨ 
+Parameter:      pHead(å¤´ç»“ç‚¹)
 **---------------------------------------------------------------------------*/
 void printList(ListNode *pHead)
 {
@@ -1583,8 +1583,8 @@ void printList(ListNode *pHead)
 
 /**--------------------------------------------------------------------------*
 Name:		    destroyList
-Discribe:		É¾³ıÁ´±í 
-Parameter:      pHead(Í·½áµã)
+Discribe:		åˆ é™¤é“¾è¡¨ 
+Parameter:      pHead(å¤´ç»“ç‚¹)
 **---------------------------------------------------------------------------*/
 void destroyList(ListNode *pHead)
 {
@@ -1599,10 +1599,10 @@ void destroyList(ListNode *pHead)
 
 /**--------------------------------------------------------------------------*
 Name:		    addListNode
-Discribe:		Ìí¼Ó½áµãµ½Á´±íµÄÖ¸¶¨Î»ÖÃ
-Parameter:      pHead(Ô­Á´±íÍ·½áµã), pos(Á´±í½áµãÎ»ÖÃË÷Òı£¬Í·½áµãÎª0), pNode(Á´±í½áµã), val(´ıÌí¼Ó½áµãÖµ)
+Discribe:		æ·»åŠ ç»“ç‚¹åˆ°é“¾è¡¨çš„æŒ‡å®šä½ç½®
+Parameter:      pHead(åŸé“¾è¡¨å¤´ç»“ç‚¹), pos(é“¾è¡¨ç»“ç‚¹ä½ç½®ç´¢å¼•ï¼Œå¤´ç»“ç‚¹ä¸º0), pNode(é“¾è¡¨ç»“ç‚¹), val(å¾…æ·»åŠ ç»“ç‚¹å€¼)
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : Á´±íÍ·½áµã¡¢Á´±í½áµãÎ»ÖÃË÷Òı  ¡¾ÔÚÔ­Á´±íposÎ»ÖÃË÷ÒıÇ°Ìí¼ÓÖµÎªvalµÄ½áµã¡¿
+//é‡è½½1   Input : é“¾è¡¨å¤´ç»“ç‚¹ã€é“¾è¡¨ç»“ç‚¹ä½ç½®ç´¢å¼•  ã€åœ¨åŸé“¾è¡¨posä½ç½®ç´¢å¼•å‰æ·»åŠ å€¼ä¸ºvalçš„ç»“ç‚¹ã€‘
 void addListNode(ListNode **pHead, int pos, const int &val)
 {
 	if (pos <= 0)
@@ -1624,7 +1624,7 @@ void addListNode(ListNode **pHead, int pos, const int &val)
 		pCur->val = value;
 	}
 }
-//ÖØÔØ2   Input : Á´±íÍ·½áµã¡¢Á´±í½áµã  ¡¾ÔÚÔ­Á´±ípNode½áµãÇ°Ìí¼ÓÖµÎªvalµÄ½áµã¡¿
+//é‡è½½2   Input : é“¾è¡¨å¤´ç»“ç‚¹ã€é“¾è¡¨ç»“ç‚¹  ã€åœ¨åŸé“¾è¡¨pNodeç»“ç‚¹å‰æ·»åŠ å€¼ä¸ºvalçš„ç»“ç‚¹ã€‘
 void addListNode(ListNode **pHead, ListNode *Node, const int &val)
 {
 	if (*pHead == Node)
@@ -1649,10 +1649,10 @@ void addListNode(ListNode **pHead, ListNode *Node, const int &val)
 
 /**--------------------------------------------------------------------------*
 Name:		    removeListNode
-Discribe:		É¾³ıÁ´±íÖ¸¶¨Î»ÖÃÏÂµÄ½áµã
-Parameter:      pHead(Ô­Á´±íÍ·½áµã), pos(Á´±í½áµãÎ»ÖÃË÷Òı£¬Í·½áµãÎª0), pNode(Á´±í½áµã)
+Discribe:		åˆ é™¤é“¾è¡¨æŒ‡å®šä½ç½®ä¸‹çš„ç»“ç‚¹
+Parameter:      pHead(åŸé“¾è¡¨å¤´ç»“ç‚¹), pos(é“¾è¡¨ç»“ç‚¹ä½ç½®ç´¢å¼•ï¼Œå¤´ç»“ç‚¹ä¸º0), pNode(é“¾è¡¨ç»“ç‚¹)
 **---------------------------------------------------------------------------*/
-//ÖØÔØ1   Input : Á´±íÍ·½áµã¡¢Á´±í½áµãÎ»ÖÃË÷Òı  ¡¾É¾³ıÔ­Á´±íposÎ»ÖÃË÷ÒıÏÂµÄ½áµã¡¿
+//é‡è½½1   Input : é“¾è¡¨å¤´ç»“ç‚¹ã€é“¾è¡¨ç»“ç‚¹ä½ç½®ç´¢å¼•  ã€åˆ é™¤åŸé“¾è¡¨posä½ç½®ç´¢å¼•ä¸‹çš„ç»“ç‚¹ã€‘
 void removeListNode(ListNode **pHead, int pos)
 {
 	if (pos <= 0)
@@ -1671,7 +1671,7 @@ void removeListNode(ListNode **pHead, int pos)
 		delete pNext; pNext = nullptr;
 	}
 }
-//ÖØÔØ2   Input : Á´±íÍ·½áµã¡¢Á´±í½áµã  ¡¾É¾³ıÔ­Á´±ípNode½áµã¡¿
+//é‡è½½2   Input : é“¾è¡¨å¤´ç»“ç‚¹ã€é“¾è¡¨ç»“ç‚¹  ã€åˆ é™¤åŸé“¾è¡¨pNodeç»“ç‚¹ã€‘
 void removeListNode(ListNode **pHead, ListNode *Node)
 {
 	if (*pHead == Node)
